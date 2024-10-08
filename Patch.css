@@ -1,0 +1,127 @@
+h1 {
+    text-align: center;
+    font-size: 400%;
+    font-family: Papyrus, fantasy;
+    padding-top: 100px;
+}
+
+.Top ul {
+    background-color: black;
+    list-style: none;
+    margin: 0;
+    padding: 30px;
+    text-align: center;
+    font-family: Papyrus, fantasy;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+ul li:nth-child(4) a {
+    font-size: 200%;
+}
+
+ul li a:visited {
+    color: blue;
+}
+
+.btn {
+    font-family: Papyrus, fantasy;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1em 2em;
+    font-size: 15px;
+    font-weight: bold;
+    border-width: 0;
+    border-radius: 1.5em;
+    text-transform: uppercase;
+    transition: .2s ease;
+    cursor: pointer
+}
+
+.text {
+    font-size: 1.2em;
+    color: white;
+    z-index: 1;
+}
+
+.btn::before {
+    position: absolute;
+    content: '';
+    width: 120%;
+    height: 260%;
+    background-image: linear-gradient(135deg, rgba(0, 5, 255, 1) 0%, rgba(255, 0, 159, 1) 100%);
+}
+
+.btn::after {
+    position: absolute;
+    content: '';
+    width: 88%;
+    height: 80%;
+    border-width: 0;
+    border-radius: 1.2em;
+    background-color: black;
+    opacity: .7;
+    transition: 100ms ease;
+}
+
+.btn:hover.btn {
+    transform: scale(1.1);
+}
+
+.btn:hover.btn::after {
+    opacity: .5;
+}
+
+.btn:hover.btn::before {
+    animation: turn_4810 .4s infinite linear;
+}
+
+.btn:active.btn {
+    transform: scale(1.05);
+}
+
+.btn:active.btn::before {
+    transform: scale(1.05);
+    animation: turn_4810 .2s infinite linear;
+}
+
+@keyframes turn_4810 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+h2 {
+    font-family: Papyrus, fantasy;
+    font-size: 200%;
+}
+
+p {
+    font-family: Papyrus, fantasy;
+    font-size: 150%;
+}
+
+.patch_list ul {
+    font-family: Papyrus, fantasy;
+    font-size: 55px;
+}
+
+.details li {
+    font-size: 30px;
+    font-family: Papyrus, fantasy;
+}
